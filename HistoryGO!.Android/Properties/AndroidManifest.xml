@@ -3,6 +3,10 @@
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
     <application android:label="HistoryGO_.Android" android:theme="@style/MainTheme">
       <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="C7:DB:B2:F6:7C:85:EF:3D:50:C6:3B:07:87:01:09:20:BB:B3:14:19" />
+      <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+      <uses-library android:name="org.apache.http.legacy" android:required="false" />
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>

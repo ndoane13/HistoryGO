@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HistoryGO_.Views.AboutPage"
+             x:Class="HistoryGO_.Views.MapPage"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              xmlns:vm="clr-namespace:HistoryGO_.ViewModels"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
-        <vm:AboutViewModel />
+        <vm:MapViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
@@ -16,7 +17,7 @@
     </ContentPage.Resources>
 
     <Grid>
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -45,8 +46,17 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
-            </StackLayout>
-        </ScrollView>
+            </StackLayout>-->
+        <!--</ScrollView>-->
+        <map:Map MapType="Street" HasZoomEnabled="True">
+            <map:Map.ItemTemplate>
+                <DataTemplate>
+                    <map:Pin Position="{Binding Position}" 
+                             Address="{Binding Address}"
+                             Label="{Binding Label}" />
+                </DataTemplate>
+            </map:Map.ItemTemplate>
+        </map:Map>
     </Grid>
 
 </ContentPage>

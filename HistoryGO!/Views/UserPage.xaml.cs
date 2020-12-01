@@ -13,11 +13,11 @@ using HistoryGO_.ViewModels;
 
 namespace HistoryGO_.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class UserPage : ContentPage
     {
         ItemsViewModel _viewModel;
 
-        public ItemsPage()
+        public UserPage()
         {
             InitializeComponent();
 

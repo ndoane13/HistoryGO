@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace HistoryGO_.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class MapPage : ContentPage
     {
-        public AboutPage()
+        public MapPage()
         {
             InitializeComponent();
         }
