@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.historygo_">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
-    <application android:label="HistoryGO_.Android" android:theme="@style/MainTheme"></application>
+    <application android:label="HistoryGO_.Android" android:theme="@style/MainTheme">
+      <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="C7:DB:B2:F6:7C:85:EF:3D:50:C6:3B:07:87:01:09:20:BB:B3:14:19" />
+    </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
