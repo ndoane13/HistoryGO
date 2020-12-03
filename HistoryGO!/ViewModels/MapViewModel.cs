@@ -9,8 +9,8 @@ namespace HistoryGO_.ViewModels
     {
         public MapViewModel()
         {
-            Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamain-quickstart"));
+            Title = "History!";
+            //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamain-quickstart"));
         }
 
         public ICommand OpenWebCommand { get; }

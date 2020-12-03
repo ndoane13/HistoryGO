@@ -21,7 +21,7 @@ namespace HistoryGO_.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "User Info";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

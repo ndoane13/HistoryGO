@@ -10,14 +10,14 @@
         <vm:MapViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
         </ResourceDictionary>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
 
-    <Grid>
-        <!--<Grid.RowDefinitions>
+    <!--<Grid>
+        --><!--<Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -47,16 +47,21 @@
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
             </StackLayout>-->
-        <!--</ScrollView>-->
-        <map:Map MapType="Street" HasZoomEnabled="True">
-            <map:Map.ItemTemplate>
-                <DataTemplate>
-                    <map:Pin Position="{Binding Position}" 
+        <!--</ScrollView>--><!--
+
+    </Grid>-->
+
+    <map:Map x:Name="mylocalmap" 
+             MapType="Street" 
+             HasZoomEnabled="True"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+        <map:Map.ItemTemplate>
+            <DataTemplate>
+                <map:Pin Position="{Binding Position}" 
                              Address="{Binding Address}"
                              Label="{Binding Label}" />
-                </DataTemplate>
-            </map:Map.ItemTemplate>
-        </map:Map>
-    </Grid>
-
+            </DataTemplate>
+        </map:Map.ItemTemplate>
+    </map:Map>
 </ContentPage>

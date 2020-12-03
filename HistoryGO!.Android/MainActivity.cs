@@ -38,11 +38,11 @@ namespace HistoryGO_.Droid
             {
                 if ((grantResults.Length == 1) && (grantResults[0] == (int)Permission.Granted))
                 {
-                    // Permissions granted - display a message.
+                    //await DisplayAlert("Permissions", "Permission granted", "ok");
                 }
                 else 
                 {
-                    // Permissions denied - display a message.
+                    //await DisplayAlert("Permissions", "Permission denied", "ok");
                 }
             }
             else
@@ -63,7 +63,7 @@ namespace HistoryGO_.Droid
                 }
                 else
                 {
-                    // Permissions already granted - display a message.
+                    //await DisplayAlert("Permissions", "Permission already granted", "ok");
                 }
             }
         }
