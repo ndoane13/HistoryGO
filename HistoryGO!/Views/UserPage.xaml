@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HistoryGO_.Views.UserPage"
-             Title="Account"
+             Title="{Binding Title}"
              xmlns:local="clr-namespace:HistoryGO_.ViewModels"  
              xmlns:model="clr-namespace:HistoryGO_.Models"  
              x:Name="UserDetailsPage">
@@ -42,15 +42,50 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
     </RefreshView>-->
-    <StackLayout Spacing="12"
-                 HorizontalOptions="Center">
-        <Frame HorizontalOptions="Center"
-               IsClippedToBounds="True"
-               HasShadow="False"
-               CornerRadius="16">
-            <Image 
-                Source="user.png"/>
-        </Frame>
-    </StackLayout>
-    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="160" />
+            <RowDefinition Height="350" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="279" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Profile Circle Image -->
+        <!--<Ellipse
+        Grid.Row="1"
+        Grid.Column="1"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        WidthRequest="168"
+        HeightRequest="168"
+        Stroke="#FFFF9900"
+        StrokeThickness="4"
+        Fill="White"/>
+        <Image
+        Grid.Row="1"
+        Grid.Column="1"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        WidthRequest="150"
+        HeightRequest="150"        
+        Source="user.png">
+            <Image.Clip>
+                <EllipseGeometry
+                Center="75,75"
+                RadiusX="75"
+                RadiusY="75"/>
+            </Image.Clip>
+        </Image>-->
+        <Image Grid.Column="1"
+               Grid.Row="1"
+               Source="user.png"/>
+
+        <!-- Login Form -->
+    </Grid>
+
 </ContentPage>

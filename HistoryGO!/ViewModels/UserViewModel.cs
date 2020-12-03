@@ -10,7 +10,7 @@ using HistoryGO_.Views;
 
 namespace HistoryGO_.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class UserViewModel : BaseViewModel
     {
         private Item _selectedItem;
 
@@ -19,9 +19,9 @@ namespace HistoryGO_.ViewModels
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public UserViewModel()
         {
-            Title = "User Info";
+            Title = "Account";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

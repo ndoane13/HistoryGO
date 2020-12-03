@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.historygo_" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.historygo_" android:installLocation="internalOnly">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
 	<application android:label="HistoryGO_.Android" android:theme="@style/MainTheme">
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAmsm-zNBSaHetxbHcYw0fM9pTNHj85RRA" />

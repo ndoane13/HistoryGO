@@ -11,8 +11,8 @@ namespace HistoryGO_
 
         public App()
         {
+            Device.SetFlags(new string[] { "Shapes_Experimental" });
             InitializeComponent();
-
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }

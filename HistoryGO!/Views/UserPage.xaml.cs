@@ -15,13 +15,13 @@ namespace HistoryGO_.Views
 {
     public partial class UserPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        UserViewModel _viewModel;
 
         public UserPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new UserViewModel();
         }
 
         protected override void OnAppearing()
