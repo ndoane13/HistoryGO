@@ -29,5 +29,10 @@ namespace HistoryGO_.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            (sender as Button).Text = "sure";
+        }
     }
 }

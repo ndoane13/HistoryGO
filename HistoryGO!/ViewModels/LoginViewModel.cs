@@ -2,23 +2,49 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace HistoryGO_.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        public Command LoginCommand { get; }
+        public Action DisplayInvalidLoginPrompt;
+        public event PropertyChangingEventHandler PropertyChanged = delegate { };
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set
+            {
+                username = value;
+                PropertyChanged(this, new PropertyChangingEventArgs("Username"));
+            }
+        }
+        private string password;
+        public string Password
+        {
+            get { return password; }
+            set
+            {
+                password = value;
+                PropertyChanged(this, new PropertyChangingEventArgs("Password"));
+            }
+        }
+        public ICommand SubmitCommand { protected set; get; }
 
         public LoginViewModel()
         {
-            LoginCommand = new Command(OnLoginClicked);
+            Title = "Account";
+            SubmitCommand = new Command(OnSubmit);
         }
 
-        private async void OnLoginClicked(object obj)
+        public void OnSubmit()
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+            if (username != "testUser" || password != "password")
+            {
+                DisplayInvalidLoginPrompt();
+            }
         }
     }
 }

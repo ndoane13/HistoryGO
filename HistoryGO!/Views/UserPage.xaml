@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HistoryGO_.Views.UserPage"
              Title="{Binding Title}"
-             xmlns:local="clr-namespace:HistoryGO_.ViewModels"  
+             xmlns:vm="clr-namespace:HistoryGO_.ViewModels"  
              xmlns:model="clr-namespace:HistoryGO_.Models"  
              x:Name="UserDetailsPage">
 
 
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
-    </ContentPage.ToolbarItems>
-    --><!--
+    <ContentPage.BindingContext>
+        <vm:UserViewModel />
+    </ContentPage.BindingContext>
+    <!--
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     --><!--
@@ -55,37 +55,22 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- Profile Circle Image -->
-        <!--<Ellipse
-        Grid.Row="1"
-        Grid.Column="1"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        WidthRequest="168"
-        HeightRequest="168"
-        Stroke="#FFFF9900"
-        StrokeThickness="4"
-        Fill="White"/>
-        <Image
-        Grid.Row="1"
-        Grid.Column="1"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        WidthRequest="150"
-        HeightRequest="150"        
-        Source="user.png">
-            <Image.Clip>
-                <EllipseGeometry
-                Center="75,75"
-                RadiusX="75"
-                RadiusY="75"/>
-            </Image.Clip>
-        </Image>-->
-        <Image Grid.Column="1"
-               Grid.Row="1"
-               Source="user.png"/>
-
-        <!-- Login Form -->
+        <StackLayout Margin="20"
+                     Grid.Column="1">
+            <Image Grid.Row="1"
+                   Source="user.png"/>
+            
+            <Button Grid.Row="2"
+                    Margin="0, 40"
+                    Command="{Binding ChangePasswordTapped}"
+                    Clicked="Button_Clicked"
+                    Text="Change Password"
+                    TextColor="White"
+                    BackgroundColor="{StaticResource Primary}"
+                    FontAttributes="Bold"
+                    FontSize="Large" />
+            
+        </StackLayout>
     </Grid>
 
 </ContentPage>

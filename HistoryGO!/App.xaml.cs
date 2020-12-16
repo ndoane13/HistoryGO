@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using HistoryGO_.Services;
 using HistoryGO_.Views;
 
 namespace HistoryGO_
@@ -13,7 +12,6 @@ namespace HistoryGO_
         {
             Device.SetFlags(new string[] { "Shapes_Experimental" });
             InitializeComponent();
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

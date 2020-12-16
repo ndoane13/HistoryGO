@@ -6,13 +6,12 @@ using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
 using HistoryGO_.Models;
-using HistoryGO_.Services;
 
 namespace HistoryGO_.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+       // public IDataStore<CustomMap> DataStore => DependencyService.Get<IDataStore<CustomMap>>();
 
         bool isBusy = false;
         public bool IsBusy

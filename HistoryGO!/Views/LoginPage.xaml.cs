@@ -15,7 +15,19 @@ namespace HistoryGO_.Views
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            var lvm = new LoginViewModel();
+            this.BindingContext = lvm;
+            lvm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid username/password", "Okay!");
+
+            Username.Completed += (object sender, EventArgs args) =>
+            {
+                Password.Focus();
+            };
+
+            Password.Completed += (object sender, EventArgs args) =>
+            {
+                lvm.SubmitCommand.Execute(null);
+            };
         }
     }
 }
