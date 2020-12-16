@@ -13,7 +13,7 @@ namespace HistoryGO_.ViewModels
 {
     public class UserViewModel : BaseViewModel
     {
-        ICommand changePasswordTapped;
+        private ICommand changePasswordTapped;
         public ICommand ChangePasswordTapped
         {
             get { return changePasswordTapped; }

@@ -42,7 +42,7 @@
     <!-- 
         I assume as with the above content I can just call this page with
         
-        await Shell.Current.GoToAsync("//PinDetailPage");
+        await Shell.Current.GoToAsync("//PinDetailPage"); // means it will search heirarchy upwards, and the page will replace the current nav stack
         
         also im purposely trying to do a flyout. dont know what it is but if its what I think it is it is excatly what I want to happen
         when someone clicks the pin info window

@@ -7,7 +7,7 @@
 
     <map:Map x:Name="map"
              MapClicked="OnMapClicked"
-             ItemsSource="{Binding Locations}">
+             ItemsSource="{Binding Locations}" >
         <map:Map.ItemTemplate>
             <DataTemplate>
                 <map:Pin Position="{Binding Position}"

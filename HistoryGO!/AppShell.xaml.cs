@@ -11,9 +11,9 @@ namespace HistoryGO_
         public AppShell()
         {
             InitializeComponent();
+
+            //Routing seems to be able to be done either through the shell cs code itself or through the xaml definition. I am currently going the xaml route
             //Routing.RegisterRoute(nameof(PinDetailPage), typeof(PinDetailPage));
-            //Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }
 
     }

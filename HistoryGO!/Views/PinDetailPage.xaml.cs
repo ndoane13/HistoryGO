@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace HistoryGO!.Views
+namespace HistoryGO_.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-public partial class PinDetailPage : ContentPage
-{
-    public PinDetailPage()
+    public partial class PinDetailPage : ContentPage
     {
-        InitializeComponent();
+        public PinDetailPage()
+        {
+            InitializeComponent();
+        }
     }
-}
 }
