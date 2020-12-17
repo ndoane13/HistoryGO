@@ -27,5 +27,12 @@ namespace HistoryGO_.Views
             //this is just to help me locate lat/lon because otherwise I'd have to use geocoder to try to swap between degrees/mins/seconds and doubles
             System.Diagnostics.Debug.WriteLine($"MapClick: {e.Position.Latitude}, {e.Position.Longitude}");
         }
+
+        async private void Pin_InfoWindowClicked(object sender, PinClickedEventArgs e)
+        {
+            //Seriously can't get VM to work correctly. It works fine for Location but doesnt work for binding commands. None of the tutorials helped
+            //doing this in the meantime
+            await Shell.Current.GoToAsync("MapPage/PinDetailPage");
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using Xamarin.Forms.Maps;
 
 namespace HistoryGO_.ViewModels
@@ -9,6 +10,7 @@ namespace HistoryGO_.ViewModels
 
         public string Address { get; }
         public string Description { get; }
+        public int ID { get; }
 
         public Position Position
         {
@@ -23,11 +25,14 @@ namespace HistoryGO_.ViewModels
             }
         }
 
+        //constructor for Location. generates the data for the pins and stores it, including ID for info window clicks
         public Location(string description, string address, Position position)
         {
             Address = address;
             Description = description;
             Position = position;
+            Random gen = new Random();
+            ID = gen.Next();
         }
 
         #region INotifyPropertyChanged

@@ -13,7 +13,7 @@ namespace HistoryGO_
             InitializeComponent();
 
             //Routing seems to be able to be done either through the shell cs code itself or through the xaml definition. I am currently going the xaml route
-            //Routing.RegisterRoute(nameof(PinDetailPage), typeof(PinDetailPage));
+            Routing.RegisterRoute("MapPage/PinDetailPage", typeof(PinDetailPage));
         }
 
     }

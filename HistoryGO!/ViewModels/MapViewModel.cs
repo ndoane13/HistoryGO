@@ -30,7 +30,7 @@ namespace HistoryGO_.ViewModels
                     await Shell.Current.GoToAsync("//PinDetailPage");
                 });
 
-            //For what its worth I found a full database of all current historical sites in the USA recognized by the National Register of Historic Places
+            //For what its worth, I found a full database of all current historical sites in the USA recognized by the National Register of Historic Places
             //But a lot of it was in gdb and other weird file formats that I honestly have no idea how to manipulate or use. 
             //not in this language and not in any other language. Maybe I should find a databases class...
             //so for now we get this...lovely...placeholder

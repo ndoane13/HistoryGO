@@ -30,7 +30,7 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Map" Icon="baseline_map_black_18dp.png" Route="AboutPage" ContentTemplate="{DataTemplate local:MapPage}" />
+        <ShellContent Title="Map" Icon="baseline_map_black_18dp.png" Route="PinDetailPage" ContentTemplate="{DataTemplate local:MapPage}" />
         <ShellContent Title="Account" Icon="baseline_account_circle_black_18dp.png" ContentTemplate="{DataTemplate local:UserPage}" />
     </TabBar>
 
@@ -39,14 +39,5 @@
         await Shell.Current.GoToAsync("//LoginPage");
     -->
     <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />
-    <!-- 
-        I assume as with the above content I can just call this page with
-        
-        await Shell.Current.GoToAsync("//PinDetailPage"); // means it will search heirarchy upwards, and the page will replace the current nav stack
-        
-        also im purposely trying to do a flyout. dont know what it is but if its what I think it is it is excatly what I want to happen
-        when someone clicks the pin info window
-    -->
-    <ShellContent Route="PinDetailPage" Shell.FlyoutBehavior="Flyout" ContentTemplate="{DataTemplate local:PinDetailPage}" />
 
 </Shell>
