@@ -11,7 +11,7 @@ namespace HistoryGO_.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-       // public IDataStore<CustomMap> DataStore => DependencyService.Get<IDataStore<CustomMap>>();
+       
 
         bool isBusy = false;
         public bool IsBusy

@@ -5,7 +5,7 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="pin Detail Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
